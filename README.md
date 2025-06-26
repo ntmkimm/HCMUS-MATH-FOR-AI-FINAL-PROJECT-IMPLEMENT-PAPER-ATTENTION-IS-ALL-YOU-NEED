@@ -20,7 +20,8 @@ or you can manually download from [English-Vietnamese Translation Datset]([https
 | File                         | Description                                        |
 |-------------------------------|----------------------------------------------------|
 | `tokenizer_input.json`        | Trained Tokenizer for English                      |
-| `tokenizer_output.json`       | Trained Tokenizer for Vietnamese|
+| `tokenizer_output.json`       | Trained Tokenizer for Vietnamese |
+| `utils.py`                   | Transformer Implementations        |
 | `train1.py`                   | Config and train script for model1.       |
 | `train2.py`                   | Config and train script for model2     |
 | `infer.py`       | Script for inference          |
@@ -77,6 +78,7 @@ Select the correct model and config for evaluate.
 - Modify the configuration to switch between the two models for inference and evaluation.
 
 ## Credits
-- This project is based on the "Attention is All You Need" paper by Vaswani et al. (2017), which introduces the Transformer model.
-- 
+This project is based on the "Attention is All You Need" paper by Vaswani et al. (2017), which introduces the Transformer model.  
+The implementation is also based on building the Transformer model from scratch using PyTorch.
 
+Special thanks to [Arun Mohan](https://www.kaggle.com/code/arunmohan003/transformer-from-scratch-using-pytorch) for the inspiration and code shared in the Kaggle notebook: [Transformer From Scratch Using PyTorch](https://www.kaggle.com/code/arunmohan003/transformer-from-scratch-using-pytorch).

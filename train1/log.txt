@@ -1,0 +1,154 @@
+Path to dataset files: /root/.cache/kagglehub/datasets/hungnm/englishvietnamese-translation/versions/1
+Processing dataset...
+Original dataset shape: (254090, 2)
+Sample data before preprocessing:
+                                                  en                                                 vi
+0         Please put the dustpan in the broom closet      xin vui lòng đặt người quét rác trong tủ chổi
+1                             Be quiet for a moment.                                    im lặng một lát
+2                                          Read this                                            đọc này
+3  Tom persuaded the store manager to give him ba...  tom thuyết phục người quản lý cửa hàng trả lại...
+4        Friendship consists of mutual understanding             tình bạn bao gồm sự hiểu biết lẫn nhau
+After removing NaN: (254090, 2)
+Sample data after preprocessing:
+                                                  en                                                 vi
+0         please put the dustpan in the broom closet      xin vui lòng đặt người quét rác trong tủ chổi
+1                              be quiet for a moment                                    im lặng một lát
+2                                          read this                                            đọc này
+3  tom persuaded the store manager to give him ba...  tom thuyết phục người quản lý cửa hàng trả lại...
+4        friendship consists of mutual understanding             tình bạn bao gồm sự hiểu biết lẫn nhau
+                                                       en                                                 vi
+0              please put the dustpan in the broom closet      xin vui lòng đặt người quét rác trong tủ chổi
+1                                   be quiet for a moment                                    im lặng một lát
+2                                               read this                                            đọc này
+3       tom persuaded the store manager to give him ba...  tom thuyết phục người quản lý cửa hàng trả lại...
+4             friendship consists of mutual understanding             tình bạn bao gồm sự hiểu biết lẫn nhau
+...                                                   ...                                                ...
+254085                       what sound does a sheep make                     một con cừu tạo ra âm thanh gì
+254086              tom stayed in boston for three months                    tom ở lại boston trong ba tháng
+254087                         tom borrowed 300 from mary                             tom đã vay 300 từ mary
+254088                           why arent you interested                         tại sao bạn không quan tâm
+254089                             you were at my wedding                          bạn đã ở đám cưới của tôi
+
+[254090 rows x 2 columns]
+Setup tokenizer for english and vietnamese...
+[00:00:01] Pre-processing sequences       ███████████████████████████████████████████████████████████████████████████████████████████████████████████████ 0        /        0[00:00:01] 
+Pre-processing sequences       ███████████████████████████████████████████████████████████████████████████████████████████████████████████████ 0        /        0
+Build dataset...
+Building dataset from 228681 samples...
+228681it [47:18, 80.55it/s]
+Successfully processed 228681 samples, 0 failed
+Building dataset from 25409 samples...
+25409it [00:29, 848.98it/s]
+Successfully processed 25409 samples, 0 failed
+Setup Transformer...
+Training...
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:45<00:00,  6.80it/s]
+Epoch 1/50, Train Loss: 4.0578
+BLEU Score: 0.3783
+Validation Loss: 2.7332
+Predicted translation for 'he is a menace': anh ấy là một kẻ thù
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:46<00:00,  6.79it/s]
+Epoch 2/50, Train Loss: 2.6226
+BLEU Score: 0.5198
+Validation Loss: 2.2825
+Predicted translation for 'he is a menace': anh ấy là một người
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [10:10<00:00,  5.85it/s]
+Epoch 3/50, Train Loss: 2.2748
+BLEU Score: 0.5777
+Validation Loss: 2.0915
+Predicted translation for 'he is a menace': anh ấy là một
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [10:04<00:00,  5.92it/s]
+Epoch 4/50, Train Loss: 2.1007
+BLEU Score: 0.6104
+Validation Loss: 1.9926
+Predicted translation for 'he is a menace': anh ấy là một người
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [10:42<00:00,  5.56it/s]
+Epoch 5/50, Train Loss: 1.9889
+BLEU Score: 0.6375
+Validation Loss: 1.9220
+Predicted translation for 'he is a menace': anh ấy là một
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [11:34<00:00,  5.14it/s]
+Epoch 6/50, Train Loss: 1.9101
+BLEU Score: 0.6566
+Validation Loss: 1.8687
+Predicted translation for 'he is a menace': anh ấy là một người
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [11:19<00:00,  5.26it/s]
+Epoch 7/50, Train Loss: 1.8490
+BLEU Score: 0.6690
+Validation Loss: 1.8370
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [10:03<00:00,  5.93it/s]
+Epoch 8/50, Train Loss: 1.8020
+BLEU Score: 0.6797
+Validation Loss: 1.8055
+Predicted translation for 'he is a menace': anh ấy là một người hướng dẫn
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [09:13<00:00,  6.45it/s]
+Epoch 9/50, Train Loss: 1.7621
+Validation Loss: 1.7830
+Predicted translation for 'he is a menace': anh ấy là một người hồi hộp
+
+Epoch 10/50, Train Loss: 1.7272
+BLEU Score: 0.6977
+Validation Loss: 1.7633
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+
+
+Epoch 11/50, Train Loss: 1.7000
+BLEU Score: 0.7035
+Validation Loss: 1.7468
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:47<00:00,  6.77it/s]
+Epoch 12/50, Train Loss: 1.6745
+BLEU Score: 0.7092
+Validation Loss: 1.7334
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:38<00:00,  6.90it/s]
+Epoch 13/50, Train Loss: 1.6517
+BLEU Score: 0.7118
+Validation Loss: 1.7274
+Predicted translation for 'he is a menace': anh ấy là một người theo dõi
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:36<00:00,  6.92it/s]
+Epoch 14/50, Train Loss: 1.6326
+BLEU Score: 0.7175
+Validation Loss: 1.7141
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:34<00:00,  6.94it/s]
+Epoch 15/50, Train Loss: 1.6143
+BLEU Score: 0.7177
+Validation Loss: 1.7047
+Predicted translation for 'he is a menace': anh ấy là một người hướng dẫn
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:39<00:00,  6.88it/s]
+Epoch 16/50, Train Loss: 1.5978
+BLEU Score: 0.7252
+Validation Loss: 1.6980
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng không
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:35<00:00,  6.93it/s]
+Epoch 17/50, Train Loss: 1.5826
+BLEU Score: 0.7281
+Validation Loss: 1.6842
+Predicted translation for 'he is a menace': anh ấy là một người đi bộ
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:37<00:00,  6.91it/s]
+Epoch 18/50, Train Loss: 1.5688
+BLEU Score: 0.7280
+Validation Loss: 1.6853
+Predicted translation for 'he is a menace': anh ấy là một người theo dõi
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:43<00:00,  6.82it/s]
+Epoch 19/50, Train Loss: 1.5562
+BLEU Score: 0.7349
+Validation Loss: 1.6791
+Predicted translation for 'he is a menace': anh ấy là một kẻ buôn lậu
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:46<00:00,  6.79it/s]
+Epoch 20/50, Train Loss: 1.5443
+BLEU Score: 0.7390
+Validation Loss: 1.6708
+Predicted translation for 'he is a menace': anh ấy là một người bán hàng
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:43<00:00,  6.83it/s]
+Epoch 21/50, Train Loss: 1.5338
+BLEU Score: 0.7389
+Validation Loss: 1.6633
+Predicted translation for 'he is a menace': anh ấy là một người ngoài hành tinh
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████| 3574/3574 [08:43<00:00,  6.83it/s]
+Epoch 22/50, Train Loss: 1.5237
+BLEU Score: 0.7415
+Validation Loss: 1.6607
+Predicted translation for 'he is a menace': anh ấy là một người chơi bóng rổ

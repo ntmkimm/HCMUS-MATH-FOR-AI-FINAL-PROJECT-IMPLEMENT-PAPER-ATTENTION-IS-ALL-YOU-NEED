@@ -1,0 +1,80 @@
+----- SET UP ENVIROMENT -----
+
+Sử dụng miniconda để setup môi trường, lưu ý: máy không GPU nên chạy trên colab
+```
+# đi đến thư mục project
+cd project
+
+conda create -n attention python=3.9
+conda activate attention
+pip intall -r requirements.txt
+```
+
+----- TRAINING -----
+Nhóm cung cấp source và config (các thông số mô hình trong training): 'train1.py', 'train2.py'
+
+Dataset nhóm sử dụng là: hungnm/englishvietnamese-translation trên kagglehub, dataset sẽ tự động tải về nếu chưa được tải, đảm bảo máy có kết nối internet
+
+```
+CUDA_VISIBLE_DEVICES=0 python train1.py
+CUDA_VISIBLE_DEVICES=0 python train2.py
+```
+Nhóm train mô hình 1 với 5 epoch khoảng 6 tiếng và mô hình 2 với 10 epoch khoảng 12 tiếng trên RTX 2080 Ti.
+Nhóm cung cấp mô hình nhóm đã train (folder train1 và folder train2) cho quá trình inference.
+
+
+------ INFERENCE -----
+
+~~~~~~MÔ HÌNH 1~~~~~~
+Điểu chỉnh config cho giống với mô hình 1 và đường dẫn tới model trong file infer.py:
+```
+# infer.py
+
+dropout = 0.2
+n = 70 # số token tối đa
+N = 4 # số identical layer của Encoder/Decoder
+h = 4 # số head trong multihead attention
+d_model = 512
+d_ff = 2048
+
+model_path = 'train1/model_epoch_5.pt'
+```
+
+Tiến hành inference với mô hình 1, type exit để thoát
+
+```
+CUDA_VISIBLE_DEVICES=0 python infer.py
+```
+
+~~~~~MÔ HÌNH 2~~~~~~
+Điểu chỉnh config cho giống với mô hình 2 và đường dẫn tới model trong file infer.py:
+```
+# infer.py
+
+dropout = 0.2
+n = 70 # số token tối đa
+N = 4 # số identical layer của Encoder/Decoder
+h = 4 # số head trong multihead attention
+d_model = 256
+d_ff = 1024
+
+model_path = 'train2/model_epoch_10.pt'
+```
+
+Tiến hành inference với mô hình 2, type exit để thoát
+
+```
+CUDA_VISIBLE_DEVICES=0 python infer.py
+```
+
+
+------ EVALUATE -----
+Tương tự, để eval mô hình đã lưu bất kì, điều chỉnh config và đường dẫn tới mô hình trong file eval.py 
+
+```
+CUDA_VISIBLE_DEVICES=0 python eval.py
+```
+
+
+
+
